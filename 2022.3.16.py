@@ -73,5 +73,5 @@ print("female" in dic)
 # --> 밸류로 대입하면 무조건 false로 나오니까 key찾는데 쓰이는 것이 맞다. 
 
 
-
-
+b=list(dic.keys())
+print(b)

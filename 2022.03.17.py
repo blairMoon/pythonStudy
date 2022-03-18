@@ -75,3 +75,4 @@ print(a)
 b=bool("")
 print(b)
 
+print(1==1)
