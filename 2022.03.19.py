@@ -5,4 +5,5 @@ print(a)
 
 #연습문제 9번 
 a=dict()
+a[('a',)]
 print(a)
