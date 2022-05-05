@@ -54,3 +54,4 @@ print(b)
 a=[4,5,6,6,7]
 b=a.remove(4)
 print(b)
+
