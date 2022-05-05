@@ -82,7 +82,7 @@ print(list(dic.values()))
 
 # items (key,value 쌍으로 얻기)
 print(dic.items())
-print(list(dic.items())
+print(list(dic.items()))
 
 #clear (쌍 모두 지우기)
 a={'name':'subin','phone':'01027175527','birth':'19980621'}
