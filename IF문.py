@@ -127,3 +127,4 @@ print("아무거나 먹어라") if 'money' in restaurant else print("나와라")
 
 
 
+
