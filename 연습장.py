@@ -1,3 +1,4 @@
+'''
 from tkinter import N
 
 
@@ -21,4 +22,25 @@ for i in range (1, 11):
 
 print(add)
 
+N = int(input())
+count = 0
+while 1:
+    a = N // 10 
+    b = N % 10
+    a + (11 * b)
+    count += 1
+    if (a +(11 * b)) == N:
+        break 
+    print(count)
+'''
+N = int(input( ))
+count = 0
+a = N // 10 
+b = N % 10
+while 1:
+    if 10 * b + ((a + b) % 10) != N:
+        count += 1
+    else:
+        break
+print(count)
 

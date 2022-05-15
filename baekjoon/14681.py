@@ -21,5 +21,6 @@ elif A<0 and B>0:
 elif A<0 and B<0:
     print(3)    
 else:
-    print(4)                                           
+    print(4)     
+                                          
 

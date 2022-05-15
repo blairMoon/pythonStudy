@@ -18,10 +18,11 @@ for i in range(T):
     x += 1
     C = A + B
     print(f"Case #{x}: {A} + {B} = {C}")    
+    
+# 혼자 해결 
 
 
-
-
+# 더 짧은 코드 
 '''
  t = int(input())
 
