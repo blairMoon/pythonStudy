@@ -33,6 +33,7 @@ while 1:
         break 
     print(count)
 '''
+'''
 N = int(input( ))
 count = 0
 a = N // 10 
@@ -43,4 +44,8 @@ while 1:
     else:
         break
 print(count)
+'''
+
+a ="123"
+print(a[::-1])
 

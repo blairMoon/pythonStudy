@@ -19,17 +19,17 @@
 
 # 나는 동생을 위해 이런 프로그램을 만들어 주지 않을 것이다. 
 
-a = 123
-print(a)
-'''
-A, B= map(str, input().split())
-A1 = int(100 * A[2] + 10 * A[1] + A[0])
-B1 = int(100 * B[2] + 10 * B[1] + B[0])
+
+A, B= map(int, input().split())
+A = str(A)
+B = str(B)
+A1 = A[::-1]
+B1 = B[::-1]
 if A1 > B1:
-    print(A1)
+    print(int(A1))
 else:
-    print(B1)    
-'''
+    print(int(B1))    
+
 
 
 
