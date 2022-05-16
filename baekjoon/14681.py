@@ -23,4 +23,4 @@ elif A<0 and B<0:
 else:
     print(4)     
                                           
-
+# 잘 품 

@@ -46,6 +46,37 @@ while 1:
 print(count)
 '''
 
-a ="123"
-print(a[::-1])
+#a ="123"
+#print(a[::-1])
+
+#a="I don't know what is my hobby."
+#print(a.split(" "))
+
+
+#a = "aaabbb"
+#print(a.count("b"))
+'''
+word = str(input())
+max_num = float('-inf')
+for i in word:
+   num = word.count(i)
+   for i in word: 
+       
+   if max_num <= num:
+    max_num = num   
+    al = i
+
+print(al)
+'''
+
+#   if a <= max_num:
+#      a = max_num 
+#print(max_num)
+
+
+
+a = [1,2,3]
+print(a[2])
+
+
 

@@ -30,6 +30,8 @@ if A1 > B1:
 else:
     print(int(B1))    
 
+ # 혼자 품   
+
 
 
 
