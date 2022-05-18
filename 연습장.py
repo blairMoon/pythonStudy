@@ -74,9 +74,12 @@ print(al)
 #print(max_num)
 
 
-
+'''
 a = [1,2,3]
 print(a[2])
+'''
 
-
-
+numbers = []
+for _ in range(9):
+    i = int(input())
+    numbers.append(i)
