@@ -14,27 +14,26 @@
 첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.
 '''
 
-num = 0
-x = 0
+num = []
 w = 0
 numbers = []
 for _ in range(10):
-    i = int(input())
-    n  = i % 42
-    numbers.append(n)
-
-for k in numbers:
-    if x != num:
-        x =num
+    i = int(input()) % 42
+    num.append(i)
+l = set(num)
+for k in l:
+    if k not in numbers:
+        k = numbers
         w += 1   
+   
 print(w)   
 
-'''    
 
+'''
 
 numbers = []
 for _ in range(9):
     i = int(input())
     numbers.append(i)
 
-'''    
+'''  

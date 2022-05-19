@@ -78,8 +78,13 @@ print(al)
 a = [1,2,3]
 print(a[2])
 '''
-
+'''
 numbers = []
 for _ in range(9):
     i = int(input())
     numbers.append(i)
+'''
+l = []
+a = int(input()) % 5
+l.append(a)
+print(l)
