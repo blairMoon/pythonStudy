@@ -18,11 +18,14 @@ N = int(input())
 count = 0
 a = N // 10 
 b = N % 10
-while 1:
-    10 * b + ((a + b) % 10)
+while True:
+    num = 10 * b + ((a + b) % 10)
+    a = num // 10
+    b = num % 10
     count += 1
-    if (10 * b) + ((a + b) % 10) == N:
+    if num == N:
         break
+
 print(count)
 
 # 하아아앙아 ㅠㅠ 
