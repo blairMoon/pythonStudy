@@ -12,13 +12,13 @@
 단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.
 '''
 
-A = float(input())
-B = float(input())
-if A>0 and B> 0:
+A = int(input())  
+B = int(input())  
+if A > 0 and B > 0:
     print(1)
-elif A<0 and B>0:
+elif A < 0 and B > 0:
     print(2) 
-elif A<0 and B<0:
+elif A < 0 and B < 0:
     print(3)    
 else:
     print(4)     

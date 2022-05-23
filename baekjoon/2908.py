@@ -17,7 +17,6 @@
 두 수는 같지 않은 세 자리 수이며, 0이 포함되어 있지 않다
 '''
 
-# 나는 동생을 위해 이런 프로그램을 만들어 주지 않을 것이다. 
 
 
 A, B= map(int, input().split())
@@ -30,27 +29,18 @@ if A1 > B1:
 else:
     print(int(B1))    
 
- # 혼자 품   
-
-
-
-
-
+  
 
 '''
-A, B= map(int, input().split())
-if (A % 10) > (B % 10):
-    print(A)
-elif (A % 10) < (B % 10):
-    print(B)
-elif (A % 100) > (B % 100):
-    print(A)
-elif (A % 100) < (B % 100):
-    print(B)
-elif (A // 100) > (B // 100):
-    print(A)
-else:
-    print(B)
+word = 'abcdef'
+tmp = ''
+for ch in word:
+    tmp = ch + tmp
+
+print(tmp)    
+
+이렇게 풀 수도 있다.
 '''
+
 
 

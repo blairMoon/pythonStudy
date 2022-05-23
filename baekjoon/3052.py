@@ -15,25 +15,13 @@
 '''
 
 num = []
-w = 0
+
 numbers = []
 for _ in range(10):
     i = int(input()) % 42
     num.append(i)
 l = set(num)
-for k in l:
-    if k not in numbers:
-        k = numbers
-        w += 1   
-   
-print(w)   
+print(len(l))
 
 
-'''
 
-numbers = []
-for _ in range(9):
-    i = int(input())
-    numbers.append(i)
-
-'''  

@@ -26,8 +26,8 @@ for i in range(case):
             score += n
             print(score)
         else:
-            n == 0 # ==이면 그냥 false,true 둘 중 하나라고 생각 
-
+            n = 0 # ==이면 그냥 false,true 둘 중 하나라고 생각 
+s
  # == 는 물음표의 의미 
  #  =는 할당하고 가리킨다는 의미
             

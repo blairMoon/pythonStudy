@@ -31,6 +31,9 @@ num = range(10)
 for i in num:
   print(n.count(i))
 
+
+# 혼자 품   
+
 '''
 - 잘못된 풀이 
 

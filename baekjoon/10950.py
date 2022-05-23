@@ -17,10 +17,6 @@ for i in range(T):
 
 
 
-##for A in range(T):
-#    for B in range(T):
- #       A + B 
-  #      A, B = map(int , input().split())
 
 
-  # 힌트 사용 
+ 

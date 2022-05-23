@@ -10,7 +10,7 @@
 '''
 
 str = input()
-l = str.split( )
+l = str.split( )  # () 없어도 됨.
 print(len(l))
 
 

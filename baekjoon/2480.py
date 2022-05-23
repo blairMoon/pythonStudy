@@ -13,21 +13,20 @@
 
 a, b, c = map(int , input().split())
 if a == b == c:
-    print(10000 + a*1000)
+    print(10000 + a * 1000)
 elif a == b != c:
-    print(1000 + a*100 )   
+    print(1000 + a * 100 )   
 elif a != b == c:
-    print(1000 + 100*c)
+    print(1000 + 100 * c)
 elif a == c != b:
-    print(1000 + 100*c) 
-
+    print(1000 + 100 * c) 
 else:
     l = [a, b, c]
     print(max(l)*100)
 
+ 
 
-
-
+# 잘품 
 '''
 max_num = float('-inf')
     for n in l:

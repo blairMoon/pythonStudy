@@ -16,4 +16,3 @@ for i in range(T):
     print(f"Case #{x}:",A + B) 
     
 
-# 혼자 해결 
