@@ -18,10 +18,14 @@ b가 처음 등장하는 위치, ... z가 처음 등장하는 위치를 공백�
 
 '''
 
-s = list(str(input()))
-al = "a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, w, t, v, w, x, y, z"
+s = str(input())
+al = "abcdefghijklmnopqrstuvwxyz"
 for i in al:
      if i in s:
-        print(s.index(i), end = ' ') 
+      print(s.index(i), end = " ")
      else:    
-        print(-1, end = ' ')
+         print(-1, end = " ")
+
+
+
+# 틀린 이유 알파벳 사이에 띄어쓰기 + , 를 넣음          
