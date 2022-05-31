@@ -1,19 +1,25 @@
 
-nums = [1,2,3,4,5]
-find_number = input()
+nums = [1, 3, 4, 2, 7]
+find_number = int(input())
 
 def find(nums, find_number):
-    index = -1 
+    index = 0
     for i in nums:
-        if find_number in nums:
-           index += 1 
-           
-    return index     
+        if find_number == i:
+            index += 1
+            break 
+        return index
+print(find(nums, find_number))
 
-print(find(nums, find_number))      
+ 
 
+'''
+string = "Hello World"
+index = -1
+while True:
+	index = string.find("o", index+1)    
+	if index == -1:        
+		break    
+	print(index)
 
-            
-    
-
-#ctrl + x  오려두기   
+'''
