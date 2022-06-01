@@ -2,14 +2,18 @@
 nums = [1, 3, 4, 2, 7]
 find_number = int(input())
 
-def find(nums, find_number):
-    index = 0
+def find_fuc(nums, find_number):
+    index = -1
     for i in nums:
+        index += 1
         if find_number == i:
-            index += 1
             break 
-        return index
-print(find(nums, find_number))
+    if find_number not in nums:
+        index = -1        
+    
+    return index 
+
+print(find_fuc(nums, find_number))
 
  
 

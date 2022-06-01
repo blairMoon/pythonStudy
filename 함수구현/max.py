@@ -6,6 +6,6 @@ def max_number(num):
     for i in num:
         if i >= max:
             max = i 
-        return max    
+    return max    
 
 print(max_number(num))        

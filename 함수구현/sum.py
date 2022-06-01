@@ -5,9 +5,8 @@ def sum_func(list):
     num = 0 
     for i in list:
         num = num + i  
-        print(num)
+        
+    return num
 
 
-#a = sum_func(list)
-
-#print(a)
+print(sum_func(list))
