@@ -20,7 +20,7 @@ M이상 N이하의 자연수 중 소수인 것을 모두 찾아 첫째 줄에 �
 M = int(input())
 N = int(input())
 sosu = []
-for i in range(M, N):
+for i in range(M, N + 1):
     if i % 2 == 0 and i != 2:
         notsosu = i
     elif i % 3 == 0 and i != 3:
