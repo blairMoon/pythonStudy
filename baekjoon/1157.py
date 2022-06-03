@@ -13,7 +13,7 @@
 '''
 word = input()
 word = word.upper()    #결국 대문자로 출력해야하니까 대문자로 먼저 다 변환 
-word_list = list(set(word))   #for문 돌릴 때 값이 중복되므로 set함수를 써서 중복 제거 (why?)
+word_list = list(set(word))   #for문 돌릴 때 값이 중복되므로 set함수를 써서 중복 제거 
 num = []                    #num이라는 리스트를 만듦
  
 for i in word_list:

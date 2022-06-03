@@ -8,5 +8,6 @@ def sum_func(list):
         
     return num
 
-
 print(sum_func(list))
+
+# total로 변경 -num 

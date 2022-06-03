@@ -7,11 +7,9 @@ def find_fuc(nums, find_number):
     for i in nums:
         index += 1
         if find_number == i:
-            break 
-    if find_number not in nums:
-        index = -1        
-    
-    return index 
+            return i 
+    return -1 
+        
 
 print(find_fuc(nums, find_number))
 

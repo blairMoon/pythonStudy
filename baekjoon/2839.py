@@ -12,30 +12,32 @@
 상근이가 배달하는 봉지의 최소 개수를 출력한다. 만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.
 
 '''
-
-
-N = int(input())
 count = 0
+N = int(input())
 while N >= 0:
     if N % 5 == 0:
-        count += (N //5)
+        count += N // 5
         print(count)
         break
-    N -= 3
+    N -= 3 
     count += 1
-else:
-    print(-1)
+else: 
+print(-1)
+
+
 
 '''
-N = int(input())
-if N % 5 != 0 and N % 3 == 0:
-    num3 =  N // 3
-    print(num3)
-elif N -     
-elif N % 3 == 0 and (N % 3) % 3 == 0:
-    num1 = N // 5 
-    num2 = ( N % 5 ) // 3 
-    print(num1 + num2)
-else:
-    print(-1)    
-'''    
+for i in range(N):
+    if (N - (5 * i)) // 3 == 0:
+        count += i 
+        count +=  N - (5 * i) // 3   
+        break
+
+    elif N % 3 == 0:
+        count += N // 3
+        break
+    else:
+        print(-1)    
+        break
+print(count)       
+'''   

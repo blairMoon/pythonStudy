@@ -22,20 +22,22 @@ N = int(input())
 sosu = []
 for i in range(M, N + 1):
     if i % 2 == 0 and i != 2:
-        notsosu = i
+        pass
+    elif i == 1:
+        pass   
     elif i % 3 == 0 and i != 3:
-        notsosu = i
+        pass
     elif i % 5 == 0 and i != 5:
-        notsosu = i
+        pass
     elif i % 7 == 0 and i != 7:
-        notsosu = i
+        pass
     else:
         sosu.append(i)  
 num = 0   
 min_num = 200000000000              
 if sosu == []:
     print(-1)
-elif True:        
+else:        
     for i in sosu:
         num = num + i
         if i <= min_num:
