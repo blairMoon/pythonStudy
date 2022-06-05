@@ -43,28 +43,31 @@ f.close()
 # if not line 은 더이상 읽을 줄이 없다는 뜻이며 이때는 none을 출력한다.
 
 # readlines 함수 사용하기 (줄의 요소를 리스트로 돌려주는 함수)
-'''
+
 f = open("C:\jocoding\ new_pile.txt", 'r')
 lines = f.readlines()
 for line in lines:
-    print(lines, end = '')
+    print(line)
 f.close()
-'''
+
 # end = ''의 의미는 print 자체가 한칸 띄워서 프린트 해주는데 한 칸 붙이라는 의미이다. 
 
 # read 함수 사용하기 (내용 전체를 문자열로 돌려주는 함수)
+''''
 f = open("C:\jocoding\ new_pile.txt", 'r')
 data = f.read()
 print(data)
 f.close()
-
+'''
 # 함수에 새로운 내용 추가하기 
+'''
 f = open("C:\jocoding\ new_pile.txt", 'a')
 for i in range(11, 20):
     data = "%d번째 줄입니다. \n" % i 
     f.write(data)
 f.close()   
-
+'''
+'''
 # with문과 함께 사용하기 (close 안해도 되는 방법)
 #정석 방법
 f = open ("foo.txt", 'w')
@@ -73,4 +76,5 @@ f.close()
 # with 사용 방법 
 with open("foo.txt",'w') as f:
     f.write('Life is too short, you need python')
+'''
 
