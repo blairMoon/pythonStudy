@@ -90,7 +90,19 @@ a = int(input()) % 5
 l.append(a)
 print(l)
 '''
+'''
 def sum(a ,b):
     print("%d, %d의 합은 %d 입니다." % (a, b, a + b))
 
 sum(1 ,2)
+'''
+'''
+list = ["오수빈", 25, 35 ]
+list2 = ['민병관', 22, 44]
+list3 = ['박승아', 24, 42] 
+
+list.sort
+'''
+
+n = '123'
+print(n[0])

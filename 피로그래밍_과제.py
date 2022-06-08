@@ -21,40 +21,25 @@ class Game:
 
     def start_game(self):
         user_character = input()
-        string_pool = string.ascii_lowercase
-        answer_string = ''
+        string_pool = string.ascii_uppercase
         for i in range(11):
-            answer_string += random.choice(string_pool)
-        return answer_string
+            self.answer_string += random.choice(string_pool)
+        return self.answer_string
 
 
-      """
-      - [ 게임 시작 전 ] 부분을 담당하는 함수 입니다.
-      - 캐릭터들을 초기화 하고, 사용자가 플레이할 캐릭터를 선택합니다.
-      - 랜덤 알파벳 10글자로 이루어진 answer_string 을 생성합니다.
-      - 동일 클래스의 game()에서 호출됩니다.
-      """
+    self.player.append(Player("김용빈", 50, 20, 0))
+    self.player.append(Player("김규리", 70, 25, 0))
+    self.player.append(Player("이승아", 80, 30, 0))
+    self.player.append(Player("윤석현", 90, 35, 0))
 
-      self.player.append(Player("김용빈", 50, 20, 0))
-      self.player.append(Player("김규리", 70, 25, 0))
-      self.player.append(Player("이승아", 80, 30, 0))
-      self.player.append(Player("윤석현", 90, 35, 0))
-
-      # TODO 1-(1): 사용자로부터 캐릭터를 입력받아 user_character에 저장해주세요.
-      # Write code here..
-      ##### END OF TODO 1-(1)() #####
-
-      # TODO 1-(2) : 랜덤 알파벳 10글자로 이루어진 단어를 만들어 answer_string에 저장해주세요.
-      # Write code here..
-      ##### END OF TODO 1-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
+      
       
     def sort_data(self, i):        
       """ 
       - [ 게임 진행 ] 부분에서 게임진행 순서를 담당하는 함수 입니다.
       - 동일 클래스의 game()에서 호출됩니다.
       """
-      data = []
-      data.sort()
+      data = self.player 
       # TODO 2 : 게임진행을 위한 data 를 재정렬해주세요.(ROUND 1 : 이름순, ROUND 2,3 : HP 높은 순)
       # sort 와 lambda 함수에 대해 공부해보세요. 사용하지 않아도 좋습니다.
       # Write code here..
