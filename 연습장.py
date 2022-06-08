@@ -103,6 +103,17 @@ list3 = ['박승아', 24, 42]
 
 list.sort
 '''
-
+'''
 n = '123'
 print(n[0])
+'''
+'''
+lst = [[2, 1], [3, 4], [1, 2], [1, 3], [3, 2]]
+lst.sort(key=lambda x:x[0])
+print(lst)
+'''
+
+import random 
+random_num = str (random.randrange(100,999))
+a = list(random_num)
+print(a)

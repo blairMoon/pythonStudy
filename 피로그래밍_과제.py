@@ -40,6 +40,14 @@ class Game:
       - 동일 클래스의 game()에서 호출됩니다.
       """
       data = self.player 
+      for i in range(3):
+          if i == 1:
+            data.sort(key = lambda x:x[0])
+          else:  
+            data.sort(key = lambda x:x[1])
+      print(data)      
+      
+
       # TODO 2 : 게임진행을 위한 data 를 재정렬해주세요.(ROUND 1 : 이름순, ROUND 2,3 : HP 높은 순)
       # sort 와 lambda 함수에 대해 공부해보세요. 사용하지 않아도 좋습니다.
       # Write code here..

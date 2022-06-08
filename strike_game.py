@@ -1,20 +1,21 @@
 
 import random 
-random_num = str(random.randrange(100,999))
-num = str(input())
+random_num =str(random.randrange(100,999))
+random_num_list = list(random_num)
 
 strike = 0
 ball = 0
 while True:
-    for i in num:
-        for j in random_num:
-            if int(num[i]) == int(random_num[j]):
-              strike += 1
-            elif i in random_num:
-                ball += 1
+    num = str(input())
+  
+    for i in random_num_list:
+       if num[i] == random_num_list[i]:
+           strike += 1 
+       elif num[i] != random_num_list[i] and i in random_num_list:
+           ball += 1 
     if strike == 3:
-        break
-                
+        break        
+                    
     print(f'{strike} strike, {ball} ball')        
 
         
