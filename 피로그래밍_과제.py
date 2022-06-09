@@ -63,9 +63,12 @@ class Game:
 
         # TODO 3-(1) : 플레이어와 컴퓨터의 차례에서는 랜덤의 알파벳 한글자를 선택하게 해주세요. 
         # 단 앞에 나왔던 알파벳과 중복되면 안됩니다.
-        string_pool = string.ascii_uppercase
-        random_alpabet = random.choice(string_pool)
-        print(f"선택 알파벳 : {random_alpabet}")
+        string_pool = string.ascii_uppercase   # 알파벳 전체가져오기  
+        alpabet = list(string_pool)  # 리스트로 만들기 
+        random_alpabet_list = random.sample(alpabet,k = 1)  # random.sample 이용해서 중복없이 알파벳 뽑기
+        pick_one = ''.join(map(str,random_alpabet_list))  # 뽑았는데 리스트로 나와서 map 사용해서 문자열로 바꾸기
+        print(f"선택 알파벳 : {pick_one}")  # 선택 알파벳 출력하기 
+        
         ##### END OF TODO 3-(1)(문제와 본 라인 사이에 코드를 작성하세요.) #####
         
         # TODO 3-(2) : 정답 시, 현재까지 맞춘 단어의 상태를 출력해주세요.

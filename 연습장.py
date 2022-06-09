@@ -130,9 +130,15 @@ print(b)
 a = random.choice(b)
 print(a)
 '''
+import random 
+import string
+string_pool = string.ascii_uppercase
+random_alpabet = list(string_pool)
+a = random.sample(random_alpabet,k = 1)
+result = ''.join(map(str,a))
+print(f"선택 알파벳 : {result}")
 
-a = 1
-b = 10
-print(a - b)
+
+
 
 
