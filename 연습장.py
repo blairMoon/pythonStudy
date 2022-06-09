@@ -120,7 +120,8 @@ print(a)
 
 
 
-
+'''
+'''
 import string
 import random
 string_pool = string.ascii_uppercase
@@ -128,8 +129,10 @@ b = list(string_pool)
 print(b)
 a = random.choice(b)
 print(a)
+'''
 
-
-
+a = 1
+b = 10
+print(a - b)
 
 
