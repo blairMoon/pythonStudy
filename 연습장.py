@@ -112,8 +112,24 @@ lst = [[2, 1], [3, 4], [1, 2], [1, 3], [3, 2]]
 lst.sort(key=lambda x:x[0])
 print(lst)
 '''
-
+'''
 import random 
 random_num = str (random.randrange(100,999))
 a = list(random_num)
 print(a)
+
+
+
+
+import string
+import random
+string_pool = string.ascii_uppercase
+b = list(string_pool)
+print(b)
+a = random.choice(b)
+print(a)
+
+
+
+
+

@@ -53,12 +53,12 @@ f.close()
 # end = ''의 의미는 print 자체가 한칸 띄워서 프린트 해주는데 한 칸 붙이라는 의미이다. 
 
 # read 함수 사용하기 (내용 전체를 문자열로 돌려주는 함수)
-''''
+
 f = open("C:\jocoding\ new_pile.txt", 'r')
 data = f.read()
 print(data)
 f.close()
-'''
+
 # 함수에 새로운 내용 추가하기 
 '''
 f = open("C:\jocoding\ new_pile.txt", 'a')

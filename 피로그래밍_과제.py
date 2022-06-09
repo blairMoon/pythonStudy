@@ -13,80 +13,77 @@ class Player:
 class Game:
 
     def __init__(self):
-      self.player = []  # 캐릭터의 목록. start_game()에서 생성
-      self.user_character = ""  # 사용자가 선택한 캐릭터
-      self.remain_alp = list(string.ascii_uppercase)  # 남은 알파벳
-      self.cur_string = ["_"] * 10  # 현재까지의 글자상태를 저장
-      self.answer_string = ""  # 랜덤 10글자 단어
+        self.player = []  # 캐릭터의 목록. start_game()에서 생성
+        self.user_character = ""  # 사용자가 선택한 캐릭터
+        self.remain_alp = list(string.ascii_uppercase)  # 남은 알파벳
+        self.cur_string = ["_"] * 10  # 현재까지의 글자상태를 저장
+        self.answer_string = ""  # 랜덤 10글자 단어
+    
 
     def start_game(self):
-        user_character = input()
+        self.player.append(Player("김용빈", 50, 20, 0))
+        self.player.append(Player("김규리", 70, 25, 0))
+        self.player.append(Player("이승아", 80, 30, 0))
+        self.player.append(Player("윤석현", 90, 35, 0))
+
+        self.user_character = input()
         string_pool = string.ascii_uppercase
-        for i in range(11):
+        for i in range(10):
             self.answer_string += random.choice(string_pool)
-        return self.answer_string
+             
+    def sort_data(self, round):        
+        """ 
+        - [ 게임 진행 ] 부분에서 게임진행 순서를 담당하는 함수 입니다.
+        - 동일 클래스의 game()에서 호출됩니다.
+        """
+        # TODO 2 : 게임진행을 위한 data 를 재정렬해주세요.(ROUND 1 : 이름순, ROUND 2,3 : HP 높은 순)
+        # sort 와 lambda 함수에 대해 공부해보세요. 사용하지 않아도 좋습니다.
 
+        if round == 1:
+            self.player.sort(key = lambda x:x[0])
+        else:  
+            self.player.sort(key = lambda x:x[1])     
 
-    self.player.append(Player("김용빈", 50, 20, 0))
-    self.player.append(Player("김규리", 70, 25, 0))
-    self.player.append(Player("이승아", 80, 30, 0))
-    self.player.append(Player("윤석현", 90, 35, 0))
-
-      
-      
-    def sort_data(self, i):        
-      """ 
-      - [ 게임 진행 ] 부분에서 게임진행 순서를 담당하는 함수 입니다.
-      - 동일 클래스의 game()에서 호출됩니다.
-      """
-      data = self.player 
-      for i in range(3):
-          if i == 1:
-            data.sort(key = lambda x:x[0])
-          else:  
-            data.sort(key = lambda x:x[1])
-      print(data)      
-      
-
-      # TODO 2 : 게임진행을 위한 data 를 재정렬해주세요.(ROUND 1 : 이름순, ROUND 2,3 : HP 높은 순)
-      # sort 와 lambda 함수에 대해 공부해보세요. 사용하지 않아도 좋습니다.
-      # Write code here..
-      ##### END OF TODO 2 (문제와 본 라인 사이에 코드를 작성하세요.) #####
+        ##### END OF TODO 2 () #####
       
     def play_game(self):
-      """
-      - [ 게임 진행 ] 부분을 담당하는 함수 입니다.
-      - 동일 클래스의 game()에서 호출됩니다.
-      """
+        """
+         - [ 게임 진행 ] 부분을 담당하는 함수 입니다.
+        - 동일 클래스의 game()에서 호출됩니다.
+        """
+        print(f"게임은 {self.player[0].name},{self.player[1].name},{self.player[2].name},{self.player[3].name} 순으로 진행됩니다.\n")
 
-      print(
-          f"게임은 {self.player[0].name},{self.player[1].name},{self.player[2].name},{self.player[3].name} 순으로 진행됩니다.\n")
-
-      for i in range(4):
-
-          if self.player[i].name == self.user_character:
-              print("***** 내 캐릭터 *****")
-              
-          else:
-              print(f"***** {i+1} 캐릭터 *****")
+        for i in range(4):
+            if self.player[i].name == self.user_character:
+                print("***** 내 캐릭터 *****") 
+            else:
+                print(f"***** {i+1} 캐릭터 *****")
           
-          print(f"이름: {self.player[i].name} (HP: {self.player[i].hp})")
+        print(f"이름: {self.player[i].name} (HP: {self.player[i].hp})")
 
-          # TODO 3-(1) : 플레이어와 컴퓨터의 차례에서는 랜덤의 알파벳 한글자를 선택하게 해주세요. 
-          # 단 앞에 나왔던 알파벳과 중복되면 안됩니다.
-          # Write code here..
-          ##### END OF TODO 3-(1)(문제와 본 라인 사이에 코드를 작성하세요.) #####
+        # TODO 3-(1) : 플레이어와 컴퓨터의 차례에서는 랜덤의 알파벳 한글자를 선택하게 해주세요. 
+        # 단 앞에 나왔던 알파벳과 중복되면 안됩니다.
+        string_pool = string.ascii_uppercase
+        random_alpabet = random.choice(string_pool)
+        print(f"선택 알파벳 : {random_alpabet}")
+        ##### END OF TODO 3-(1)(문제와 본 라인 사이에 코드를 작성하세요.) #####
         
-          # TODO 3-(2) : 정답 시, 현재까지 맞춘 단어의 상태를 출력해주세요.
-					# 이 단계에서 플레이어 별 점수 집계도 처리해주셔야 합니다.
-          #  print("***** 맞았습니다 ᵔεᵔ  *****")
-          # Write code here..
-          ##### END OF TODO 3-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
-            
-          # TODO 3-(3) : 오답 시, 생명력을 데미지만큼 감소시켜주고 이를 출력해주세요.
-          #  print("***** 틀렸습니다 (ﾟ⊿ﾟ)  ******")
-          # Write code here..
-          ##### END OF TODO 3-(3)(문제와 본 라인 사이에 코드를 작성하세요.) #####
+        # TODO 3-(2) : 정답 시, 현재까지 맞춘 단어의 상태를 출력해주세요.
+                # 이 단계에서 플레이어 별 점수 집계도 처리해주셔야 합니다.
+        if random_alpabet in self.answer_string: 
+            idx = self.answer_string.index(random_alpabet) 
+            self.cur_string[idx] = random_alpabet
+            print(self.cur_string)
+            print("***** 맞았습니다 ᵔεᵔ  *****")
+        ##### END OF TODO 3-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
+
+        # TODO 3-(3) : 오답 시, 생명력을 데미지만큼 감소시켜주고 이를 출력해주세요.
+    else:
+            print(f"선택 알파벳 : {random_alpabet}")
+            print("***** 틀렸습니다 (ﾟ⊿ﾟ)  ******")
+            print(f"{self.player[i].name}은 틀렸기 때문에 HP가 {self.player[i].hp}입니다.")
+
+        ##### END OF TODO 3-(3)(문제와 본 라인 사이에 코드를 작성하세요.) #####
           
 
     def game_result(self):

@@ -18,3 +18,14 @@ class FourCal:
 a = FourCal()
 a.setdata(4, 2)
 print(a.add())
+
+
+# 생성자 (초깃값 설정하기)
+
+class Fourcal:
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second 
+    def setdata(self, first, second):
+       self.first = first 
+       self.second = second     
