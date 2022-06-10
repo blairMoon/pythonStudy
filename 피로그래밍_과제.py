@@ -73,9 +73,9 @@ class Game:
         
         # TODO 3-(2) : 정답 시, 현재까지 맞춘 단어의 상태를 출력해주세요.
                 # 이 단계에서 플레이어 별 점수 집계도 처리해주셔야 합니다.
-        if random_alpabet in self.answer_string: 
-            idx = self.answer_string.index(random_alpabet) 
-            self.cur_string[idx] = random_alpabet
+        if pick_one in self.answer_string: 
+            idx = self.answer_string.index(pick_one) 
+            self.cur_string[idx] = pick_one
             self.correct_alp += 1
             print(self.cur_string)
             print("***** 맞았습니다 ᵔεᵔ  *****")
@@ -84,7 +84,7 @@ class Game:
         # TODO 3-(3) : 오답 시, 생명력을 데미지만큼 감소시켜주고 이를 출력해주세요.
         else:
             self.player[1] - self.player[2]
-            print(f"선택 알파벳 : {random_alpabet}")
+            print(f"선택 알파벳 : {pick_one}")
             print("***** 틀렸습니다 (ﾟ⊿ﾟ)  ******")
             print(f"{self.player.name}은 틀렸기 때문에 HP가 {self.player.hp}입니다.")
 
@@ -106,10 +106,10 @@ class Game:
       print("=============================")
       print("     게임 순위 - 생명력")
       print("=============================")
-        self.player.sort(key = lambda x:x[1])    # 생명력 순으로 나열 
-        if self.player == self.user_character:   #만약 내가 선택한 캐릭터라면 
+      self.player.sort(key = lambda x:x[1])    # 생명력 순으로 나열 
+      if self.player == self.user_character:   #만약 내가 선택한 캐릭터라면 
             self.player.name ="*" + self.player.name + "*"  # 앞뒤로 * 추가 
-        if self.player.hp <= 0:      #hp가 만약 0보다 작거나 같다면 
+      if self.player.hp <= 0:      #hp가 만약 0보다 작거나 같다면 
             self.player.hp = "사망"   #player의 hp를 사망으로 바꿈 
             print(f"1등:{self.player[0].name}, HP:{self.player[0].hp} /n, 2등: {self.player[1].name},HP:{self.player[1].hp} /n, 3등: {self.player[2].name}, HP:{self.player[2].hp} /n, 4등: {self.player[3].name}, HP:{self.player[3].hp}" )
         
@@ -120,12 +120,12 @@ class Game:
       # TODO 4-(2) : 알파벳 맞춘 횟수 순으로 결과값을 출력해주세요.
       # 내가 선택한 캐릭터 이름 앞뒤에는 *을 붙여주세요.
       # sort 와 lambda 함수에 대해 공부해보세요. 사용하지 않아도 좋습니다.
-    print("=============================")
-    print(" 게임 순위 - 알파벳 맞춘 횟수")
-    print("=============================")
-        self.player.sort(key = lambda x:x[4])  # 알파벳 맞춘 횟수 순으로 나열 
-        if self.player == self.user_character:  # 만약 내가 선택한 캐릭터라면 
-             "*" + self.player.name + "*"    # 앞뒤로 * 추가 
+      print("=============================")
+      print(" 게임 순위 - 알파벳 맞춘 횟수")
+      print("=============================")
+      self.player.sort(key = lambda x:x[4])  # 알파벳 맞춘 횟수 순으로 나열 
+      if self.player == self.user_character:  # 만약 내가 선택한 캐릭터라면 
+            "*" + self.player.name + "*"    # 앞뒤로 * 추가 
             print(f"1등:{self.player[0].name}, {self.player[0].correct_alp}회, /n, 2등: {self.player[1].name},{self.player[1].correct_alp}회 /n, 3등: {self.player[2].name}, {self.player[0].correct_alp}회  /n, 4등: {self.player[3].name},{self.player[0].correct_alp}회" )
              
       ##### END OF TODO 4-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
