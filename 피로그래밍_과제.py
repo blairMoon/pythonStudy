@@ -60,6 +60,7 @@ class Game:
                 print(f"이름: {self.player[i].name} (HP: {self.player[i].hp})")
             else:
                 print(f"***** {i+1} 캐릭터 *****")
+                print(f"이름: {self.player[i].name} (HP: {self.player[i].hp})")
         # TODO 3-(1) : 플레이어와 컴퓨터의 차례에서는 랜덤의 알파벳 한글자를 선택하게 해주세요. 
         # 단 앞에 나왔던 알파벳과 중복되면 안됩니다.
 
@@ -77,8 +78,9 @@ class Game:
             if pick_one in self.answer_string: 
                 idx = self.answer_string.index(pick_one) 
                 self.cur_string[idx] = pick_one
+                self.cur_string_str = ' '.join(map(str, self.cur_string))
                 self.player[i].correct_alp += 1
-                print(self.cur_string)
+                print(self.cur_string_str)
                 print("***** 맞았습니다 ᵔεᵔ  *****")
         ##### END OF TODO 3-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
 
@@ -86,7 +88,6 @@ class Game:
             else:
                 damaged_hp = (self.player[i].hp) - (self.player[i].damage)
                 self.player[i].hp = damaged_hp
-                print(f"선택 알파벳 : {pick_one}")
                 print("***** 틀렸습니다 (ﾟ⊿ﾟ)  ******")
                 print(f"{self.player[i].name}은 틀렸기 때문에 HP가 {self.player[i].hp}입니다.")
 
@@ -107,7 +108,8 @@ class Game:
         print("=============================")
         print("     게임 순위 - 생명력")
         print("=============================")
-        self.player.sort(key = lambda x:x.hp)   
+        self.player.sort(key = lambda x:x.hp)
+
         for i in range(4):
             if self.player == self.user_character:   #만약 내가 선택한 캐릭터라면 
                 self.player[i].name ="*" + self.player.name + "*"  # 앞뒤로 * 추가 
@@ -129,7 +131,7 @@ class Game:
         for i in range(4):
             if self.player == self.user_character:  # 만약 내가 선택한 캐릭터라면 
                 self.player.name = "*" + self.player.name + "*"    # 앞뒤로 * 추가 
-        print(f" 1등: {self.player[0].name} {self.player[0].correct_alp}회\n 2등: {self.player[1].name} {self.player[1].correct_alp}회 \n 3등: {self.player[2].name} {self.player[0].correct_alp}회\n 4등: {self.player[3].name} {self.player[0].correct_alp}회" )
+        print(f" 1등: {self.player[0].name} {self.player[0].correct_alp}회\n 2등: {self.player[1].name} {self.player[1].correct_alp}회 \n 3등: {self.player[2].name} {self.player[2].correct_alp}회\n 4등: {self.player[3].name} {self.player[3].correct_alp}회" )
              
       ##### END OF TODO 4-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
     

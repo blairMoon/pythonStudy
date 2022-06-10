@@ -139,13 +139,21 @@ a = random.sample(random_alpabet,k = 1)
 result = ''.join(map(str,a))
 print(f"선택 알파벳 : {result}")
 '''
-
+'''
 a = [1,2,3]
 b = [4,5,6]
 
 print(a[0]-b[1])
-
-
+'''
+'''
+name = ['오수빈', '도라에몽','짱구']
+name.sort(key = lambda x:x.name )
+'''
+user = '오수빈'
+player_name = '오수빈'
+if player_name == user:
+    player_name = "*"+ user +"*"
+    print(player_name)
 
 
 
