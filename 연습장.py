@@ -130,6 +130,7 @@ print(b)
 a = random.choice(b)
 print(a)
 '''
+'''
 import random 
 import string
 string_pool = string.ascii_uppercase
@@ -137,6 +138,12 @@ random_alpabet = list(string_pool)
 a = random.sample(random_alpabet,k = 1)
 result = ''.join(map(str,a))
 print(f"선택 알파벳 : {result}")
+'''
+
+a = [1,2,3]
+b = [4,5,6]
+
+print(a[0]-b[1])
 
 
 
