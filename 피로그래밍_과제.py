@@ -43,7 +43,7 @@ class Game:
         if round == 1:
             self.player.sort(key = lambda x:x.name )
         else:  
-            self.player.sort(key = lambda x:x.hp )     
+            self.player.sort(key = lambda x:-x.hp )     
 
         ##### END OF TODO 2 () #####
       
@@ -108,13 +108,13 @@ class Game:
         print("=============================")
         print("     게임 순위 - 생명력")
         print("=============================")
-        self.player.sort(key = lambda x:x.hp)
+        self.player.sort(key = lambda x:-x.hp)
 
         for i in range(4):
-            if self.player == self.user_character:   #만약 내가 선택한 캐릭터라면 
-                self.player[i].name ="*" + self.player.name + "*"  # 앞뒤로 * 추가 
-            if self.player[i].hp <= 0:      #hp가 만약 0보다 작거나 같다면 
-                self.player[i].hp = "사망"   #player의 hp를 사망으로 바꿈 
+            if self.player[i].name == self.user_character:   
+                self.player[i].name = "*" + self.player[i].name + "*"  
+            if self.player[i].hp <= 0:      
+                self.player[i].hp = "사망"   
         print(f" 1등: {self.player[0].name} (HP:{self.player[0].hp}) \n 2등: {self.player[1].name} (HP:{self.player[1].hp}) \n 3등: {self.player[2].name} (HP:{self.player[2].hp}) \n 4등: {self.player[3].name} (HP:{self.player[3].hp})" )
         
             
@@ -127,10 +127,10 @@ class Game:
         print("=============================")
         print(" 게임 순위 - 알파벳 맞춘 횟수")
         print("=============================")
-        self.player.sort(key = lambda x:x.correct_alp)  # 알파벳 맞춘 횟수 순으로 나열 
+        self.player.sort(key = lambda x:-x.correct_alp)  # 알파벳 맞춘 횟수 순으로 나열 
         for i in range(4):
-            if self.player == self.user_character:  # 만약 내가 선택한 캐릭터라면 
-                self.player.name = "*" + self.player.name + "*"    # 앞뒤로 * 추가 
+            if self.player[i].name == self.user_character:  # 만약 내가 선택한 캐릭터라면 
+                self.player[i].name = "*" + self.player[i].name + "*"    # 앞뒤로 * 추가 
         print(f" 1등: {self.player[0].name} {self.player[0].correct_alp}회\n 2등: {self.player[1].name} {self.player[1].correct_alp}회 \n 3등: {self.player[2].name} {self.player[2].correct_alp}회\n 4등: {self.player[3].name} {self.player[3].correct_alp}회" )
              
       ##### END OF TODO 4-(2)(문제와 본 라인 사이에 코드를 작성하세요.) #####
