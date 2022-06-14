@@ -22,7 +22,7 @@ while N >= 0:
     N -= 3 
     count += 1
 else: 
-print(-1)
+    print(-1)
 
 
 

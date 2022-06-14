@@ -17,8 +17,28 @@ for i in range(count_N):
     sort_list.append(N)
 
 for i in sort_list:
-    for j in(0, len(sort_list) + 1):
-        if i <= sort_list[j]:
+    for j in range(count_N - 1):
+        if (sort_list[j]) > (sort_list[j + 1]):
+            (sort_list[j]), (sort_list[j + 1]) = (sort_list[j + 1]),  (sort_list[j])
+           
+sort_str = '\n'.join(map(str,sort_list))
+print(sort_str)   
+        
+
+
+'''
+sort_list = []
+count_N = int(input())
+for i in range(count_N):
+    N = int(input())
+    sort_list.append(N)
+
+for i in sort_list:
+    for j in range(count_N):
+        while i > sort_list[j]:
+            sort_list[j - 1] = sort_list[j]
             sort_list[j] = i
-            sort_list[j + 1] = sort_list[j]
-print(sort_list)            
+           
+print(sort_list)
+'''        
+

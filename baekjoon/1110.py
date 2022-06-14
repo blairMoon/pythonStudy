@@ -28,7 +28,7 @@ while True:
 
 print(count)
 
-# 하아아앙아 ㅠㅠ 
+
 
 
 

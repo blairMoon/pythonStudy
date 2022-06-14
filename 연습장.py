@@ -149,11 +149,42 @@ print(a[0]-b[1])
 name = ['오수빈', '도라에몽','짱구']
 name.sort(key = lambda x:x.name )
 '''
+'''
 user = '오수빈'
 player_name = '오수빈'
 if player_name == user:
     player_name = "*"+ user +"*"
     print(player_name)
+'''
+'''
+n = [1,2,3,4,5]
+for i in range(len(n)):
+    print(i)
 
+if 2 <= n[3]:
+    print(2)
+'''
+'''
+for i in (0,5):
+    print(i)
+'''
+'''
+list = []
+for i in range(4):
+    list.append(i)
 
+print(list)    
+'''
+'''
+a= 2 
+b = 3
+[a ,b] = [b, a]
+
+print(a,b)
+'''
+list = [1,2,3,4]
+a =''.join(map(str,list))
+print(a)
+
+a 
 
