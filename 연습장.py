@@ -182,9 +182,19 @@ b = 3
 
 print(a,b)
 '''
+'''
 list = [1,2,3,4]
 a =''.join(map(str,list))
 print(a)
+'''
+'''
+list = [1234]
+a = ''.join(map(str,list))
+print(a)
+'''
 
-a 
+a = '123'
+b = '345'
+if a[2] in b:
+    print(1)
 
