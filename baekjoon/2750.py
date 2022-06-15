@@ -8,21 +8,21 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 첫째 줄부터 N개의 줄에 오름차순으로 정렬한 결과를 한 줄에 하나씩 출력한다.
 '''
 
-
-
 sort_list = []
-count_N = int(input())
-for i in range(count_N):
-    N = int(input())
-    sort_list.append(N)
+N = int(input())
+for _ in range(N):
+    sort_list.append(int(input()))
 
-for i in sort_list:
-    for j in range(count_N - 1):
-        if (sort_list[j]) > (sort_list[j + 1]):
-            (sort_list[j]), (sort_list[j + 1]) = (sort_list[j + 1]),  (sort_list[j])
+for _ in range(N):
+    for j in range(N-1):
+        if (sort_list[j]) > (sort_list[j+1]):
+            (sort_list[j]), (sort_list[j+1]) = (sort_list[j+1]),  (sort_list[j])
            
-sort_str = '\n'.join(map(str,sort_list))
-print(sort_str)   
+sort_str = '\n'.join(map(str, sort_list))
+print(sort_str)
+
+for n in sort_list:
+    print(n) 
         
 
 

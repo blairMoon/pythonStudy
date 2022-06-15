@@ -192,9 +192,12 @@ list = [1234]
 a = ''.join(map(str,list))
 print(a)
 '''
-
+'''
 a = '123'
 b = '345'
 if a[2] in b:
     print(1)
-
+'''
+a = input()
+if a == "끝":
+    print("hey")
