@@ -2,7 +2,7 @@
 
 people = []
 class Person_input:
-    def __init__(self,*args):
+    def __init__(self,*args): # 많은 변수를 받을 때는 self 뒤에 *args 써줘야한다!! 까먹지말깅 
         while True:
             self.name = input("이름은:")
             self.id = input("ID:")
