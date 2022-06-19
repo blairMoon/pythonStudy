@@ -13,16 +13,16 @@ N = int(input())
 for _ in range(N):
     sort_list.append(int(input()))
 
-for _ in range(N):
+for _ in range(N):  # for문을 쓸 때 항상 임시 변수 i가 들어가야 하는 것은 아니다 (i를 쓰지 않고 돌리고 싶다면 _사용)
     for j in range(N-1):
         if (sort_list[j]) > (sort_list[j+1]):
             (sort_list[j]), (sort_list[j+1]) = (sort_list[j+1]),  (sort_list[j])
            
-sort_str = '\n'.join(map(str, sort_list))
+sort_str = '\n'.join(map(str, sort_list))  # 이 식보다 for문 돌려서 출력하는 게 더 간편하다고 피드백 받음
 print(sort_str)
 
-for n in sort_list:
-    print(n) 
+#for n in sort_list:
+#    print(n) 
         
 
 
