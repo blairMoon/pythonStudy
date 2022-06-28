@@ -201,3 +201,7 @@ if a[2] in b:
 a = input()
 if a == "끝":
     print("hey")
+
+a = 5
+for i in range(a):
+    print(i)    
