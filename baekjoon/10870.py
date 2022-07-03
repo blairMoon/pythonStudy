@@ -15,12 +15,34 @@ n이 주어졌을 때, n번째 피보나치 수를 구하는 프로그램을 작
 
 '''
 n = int(input())
-def pibonachi(num):
-    for _ in range(num + 1):
-        
-        
+def fibonacci(n):
+    if n == 0:
+        return 0 
+    elif n == 1:
+        return 1 
+    else:
+        return fibonacci(n - 1)  + fibonacci(n - 2)
+
+assert fibonacci(5) == 5
+assert fibonacci(10) == 15 
+
+
+dp = [0] * 1000
+def fib(n):
+    if n <= 1:
+        return n
+    elif dp[n] == dp[n-1] + dp[n-2]:
+        a = dp
+
+
+
+
     
-
-print(pibonachi(n))      
-
+'''
+def fac(n):
+    if n <= 1:
+        return 1 
+    else:
+        return n * fac(n - 1)
+'''
 
