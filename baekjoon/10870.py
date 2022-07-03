@@ -23,17 +23,19 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1)  + fibonacci(n - 2)
 
+print(fibonacci(n))
+'''
 assert fibonacci(5) == 5
 assert fibonacci(10) == 15 
-
-
+'''
+'''
 dp = [0] * 1000
 def fib(n):
     if n <= 1:
         return n
     elif dp[n] == dp[n-1] + dp[n-2]:
         a = dp
-
+'''
 
 
 
